@@ -40,7 +40,7 @@ const MovieHero = () => {
         
         {/* Large Screen Size */}
         <div className= "relative hidden w-full lg:block" style= {{height: "28rem" }}>
-            <img src={`https:/image.tmdb.org/t/p/original${movie.backdrop_path}`} 
+            <img src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`} 
                      alt= "Backdrop Poster" 
                      className= "absolute inset-0 w-full h-full object-cover object-center z-0"/>
 
@@ -48,7 +48,7 @@ const MovieHero = () => {
                 <div className= "absolute z-30 left-24 top-10 flex items-center gap-10">
                     
                     <div className= "w-64 h-96 ">
-                        <img src= {`https:/image.tmdb.org/t/p/original${movie.poster_path}`} 
+                        <img src= {`https://image.tmdb.org/t/p/original${movie.poster_path}`} 
                              alt="Movie Poster" 
                              className= "w-full h-full rounded-lg"/>
                     </div>
