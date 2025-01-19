@@ -21,7 +21,7 @@ const MoviePage = () => {
 
 
     useEffect(() => {
-    fetch(`${API_URL}/movies`)  // Use the API URL from config.js
+    fetch(`${API_URL}/movie`)  // Use the API URL from config.js
       .then((response) => response.json())  // Parse the response as JSON
       .then((data) => setMovie(data))  // Set the movie data in state
       .catch((error) => console.error('Error fetching movies:', error));
