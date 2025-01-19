@@ -9,6 +9,7 @@ import PosterSlider from "../components/PosterSlider/PosterSlider.Component.jsx"
 import MovieHero from "../components/MovieHero/MovieHero.Component.jsx";
 import Cast from "../components/Cast/Cast.Component.jsx";
 import { NextArrow, PrevArrow } from '../components/HeroCarousel/Arrows.Component.jsx';
+import API_URL from '../components/config.js';
 
 const MoviePage = () => {
     const {id} = useParams();
@@ -17,6 +18,14 @@ const MoviePage = () => {
     const [cast, setCast] = useState([]);
     const [similarMovies, setSimilarMovies] = useState([]);
     const [recommendedMovies, setRecommendedMovies] = useState([]); 
+
+
+    useEffect(() => {
+    fetch(`${API_URL}/movies`)  // Use the API URL from config.js
+      .then((response) => response.json())  // Parse the response as JSON
+      .then((data) => setMovie(data))  // Set the movie data in state
+      .catch((error) => console.error('Error fetching movies:', error));
+  }, [id]);
 
 
     useEffect(() => {

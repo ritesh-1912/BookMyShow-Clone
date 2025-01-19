@@ -8,7 +8,6 @@ const MovielayoutHOC =
     <div>
         <MovieNavbar/>
         <Component {...props}/>
-        <div>Footer</div>
     </div>
   );
 };

@@ -20,7 +20,6 @@ export function NextArrow(props) {
       }}
       onClick={props.onClick}
     >
-      {/* No arrow content, circle will now be empty */}
     </div>
   );
 }
@@ -45,7 +44,6 @@ export function PrevArrow(props) {
       }}
       onClick={props.onClick}
     >
-      {/* No arrow content, circle will now be empty */}
     </div>
   );
 }
